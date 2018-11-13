@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,8 +12,9 @@ public class Distance : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
-	}
+
+        distance_ = Vector3.Distance(speaker.transform.position, ball.transform.position);
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -24,5 +26,10 @@ public class Distance : MonoBehaviour {
     {
 
         distance_ = Vector3.Distance(speaker.transform.position, ball.transform.position);
+    }
+
+    internal double GetDistance()
+    {
+        return Math.Round((Double)distance_,2);
     }
 }
