@@ -48,9 +48,9 @@ public class AcousticForces : MonoBehaviour
         }*/
 
         //sin(2 * Math.PI * wave.czestotliwosc * (odleglosc / wave.predkosc) + wave.przesuniecie);
-        float f = (float)(Math.Sin(2 * Math.PI * wave.czestotliwosc * (odleglosc / wave.predkosc) + Math.PI / i) + 1.0)
-            * 10.0f;
-        Debug.Log(f);
+        float f = (float)(Math.Sin(2 * Math.PI * wave.czestotliwosc * (odleglosc / wave.predkosc) + Math.PI / i) + 1.0 + i/Math.PI)
+            * 3.1f;
+        Debug.Log(i + " " + f);
         rb.AddForce( f * force.normalized);
 
        // rb = ball.GetComponent<Rigidbody>();
