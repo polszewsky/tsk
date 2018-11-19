@@ -23,6 +23,6 @@ public class ObjectPhysics : MonoBehaviour {
 
     void FixedUpdate()
     {
-        body.AddForce(force * forceVec.normalized);
+        //body.AddForce(force * forceVec.normalized);
     }
 }

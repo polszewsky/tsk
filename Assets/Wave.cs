@@ -7,7 +7,9 @@ public class Wave : MonoBehaviour {
 
     public double czestotliwosc; //Hz || 2Hz = 1/2s etc...
     public double dlugosc;       //
-    public double predkosc = 340.12; //m/s
+    public double predkosc = 34000; //cm/s
+
+    public float przesuniecie;
 
     void Start()
     {
@@ -21,7 +23,7 @@ public class Wave : MonoBehaviour {
 
     private void FixedUpdate()
     {
-        dlugosc = ((1 / czestotliwosc) * predkosc) * 100;
+        dlugosc = ((1 / czestotliwosc) * predkosc);
         Debug.Log(dlugosc.ToString() + " cm");
     }
 
